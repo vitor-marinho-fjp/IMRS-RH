@@ -3,7 +3,7 @@
 # Projeto de Análise de Recursos Humanos
 
 Este repositório contém um projeto de análise de recursos humanos para municípios, com base em dados de diferentes fontes.
-O projeto inclui a leitura de dados de várias planilhas do Excel, a limpeza e agregação desses dados e a geração de indicadores relacionados aos recursos humanos nos municípios.
+O projeto inclui a leitura de dados de várias planilhas do Excel, a limpeza e agregação desses dados e a geração de indicadores relacionados aos recursos humanos nos municípios de Minas Gerais.
 
 ## Bases de Dados
 
@@ -25,28 +25,11 @@ O projeto inclui as seguintes etapas de análise de dados:
 
 ## Como Usar
 
-Para executar este projeto em seu ambiente local, siga estas etapas:
+Certifique-se de que você possui as bibliotecas necessárias instaladas. Você pode instalar as dependências executando:
 
-1. Clone este repositório em sua máquina:
+Execute o arquivo R `imrs_rg.R` para executar a análise de dados.
 
-```
-git clone https://github.com/vitor-marinho-fjp/IMRS-RH
-```
-
-
-
-2. Certifique-se de que você possui as bibliotecas necessárias instaladas. Você pode instalar as dependências executando:
-
-```
-install.packages("writexl")
-install.packages("dplyr")
-install.packages("readxl")
-# Adicione outras dependências conforme necessário
-```
-
-3. Execute o arquivo R `imrs_rg.R` para executar a análise de dados.
-
-4. Os resultados da análise serão salvos em um arquivo Excel chamado `IMRS_RH.xlsx`.
+Os resultados da análise serão salvos em um arquivo Excel chamado `IMRS_RH.xlsx`.
 
 ## Contribuições
 
