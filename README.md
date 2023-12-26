@@ -9,11 +9,11 @@ O projeto inclui a leitura de dados de várias planilhas do Excel, a limpeza e a
 
 O projeto utiliza várias bases de dados, incluindo:
 
- *Municípios*: Dados demográficos e informações sobre os municípios.
-*CRAS (Centro de Referência de Assistência Social)*: Dados sobre recursos humanos nos CRAS.
- *CREAS (Centro de Referência Especializado de Assistência Social)*: Dados sobre recursos humanos nos CREAS.
- *Gestão Municipal*: Dados sobre recursos humanos na gestão municipal.
- *População 2022*: Dados populacionais para o ano de 2022.
+- *Municípios*: Dados demográficos e informações sobre os municípios.
+-*CRAS (Centro de Referência de Assistência Social)*: Dados sobre recursos humanos nos CRAS.
+- *CREAS (Centro de Referência Especializado de Assistência Social)*: Dados sobre recursos humanos nos CREAS.
+- *Gestão Municipal*: Dados sobre recursos humanos na gestão municipal.
+- *População 2022*: Dados populacionais para o ano de 2022.
 
 ## Análise de Dados
 
