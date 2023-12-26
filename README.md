@@ -2,8 +2,8 @@
 ```markdown
 # Projeto de Análise de Recursos Humanos
 
-Este repositório contém um projeto de análise de recursos humanos para municípios, com base em dados de diferentes fontes.
-O projeto inclui a leitura de dados de várias planilhas do Excel, a limpeza e agregação desses dados e a geração de indicadores relacionados aos recursos humanos nos municípios de Minas Gerais.
+Este repositório contém um projeto de análise de recursos humanos da assistencia social para municípios de Minas Gerais, com base em dados de diferentes fontes.
+O projeto inclui a leitura de dados de várias planilhas do Excel, a limpeza e agregação desses dados e a geração de indicadores relacionados aos recursos humanos nos municípios.
 
 ## Bases de Dados
 
