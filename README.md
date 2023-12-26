@@ -30,8 +30,10 @@ Para executar este projeto em seu ambiente local, siga estas etapas:
 1. Clone este repositório em sua máquina:
 
 ```
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/vitor-marinho-fjp/IMRS-RH
 ```
+
+
 
 2. Certifique-se de que você possui as bibliotecas necessárias instaladas. Você pode instalar as dependências executando:
 
@@ -42,7 +44,7 @@ install.packages("readxl")
 # Adicione outras dependências conforme necessário
 ```
 
-3. Execute o arquivo R `seu_script.R` para executar a análise de dados.
+3. Execute o arquivo R `imrs_rg.R` para executar a análise de dados.
 
 4. Os resultados da análise serão salvos em um arquivo Excel chamado `IMRS_RH.xlsx`.
 
