@@ -1,7 +1,7 @@
 library(tidyverse)
 library(readxl)
 
-# -------------------------------------------------------------------------
+# Bases -------------------------------------------------------------------------
 
 
 municipio <- read_excel("RH.xlsx", sheet = "mun")
@@ -16,21 +16,17 @@ creas <- read_excel("2 - CREAS/Censo_SUAS_ 2022_CREAS_RH.xlsx")
 
 gestao_mun <- read_excel("9 - GESTÃO MUNICIPAL/Censo_SUAS_2022_Gestão_Municipal_RH.xlsx")
 
+pop_2022 <- read_excel("POP FAIXAS ETÁRIAS Totais - Homens e Mulheres 2022.xlsx", 
+                       skip = 3) %>% 
+  select(1:3) %>% rename(IBGE7=1,
+                         populacao = 3)
 
-cras <-  left_join(cras, creas)
-
-
-cras <-  left_join(cras, gestao_mun)
 
 
 
 # Somar emprego total -----------------------------------------------------
 
-library(dplyr)
 
-# Suponha que seus dataframes se chamem df_cras, df_creas e df_gestao e que todos contêm uma coluna chamada 'IBGE' para o código do município.
-
-# Primeiro, renomeie as colunas para ter nomes consistentes em todos os dataframes
 df_cras_renamed <- cras %>%
   rename(
     nivel_fundamental = d70_9bin1_sum,
@@ -99,34 +95,6 @@ df <-  left_join(df, df_gestao_mun)
 
 
 
-
-df %>% group_by(IBGE7) 
-  summarise(
-    nivel_fundamental = sum(nivel_fundamental, nivel_fundamental1, nivel_fundamental2),
-    nivel_medio = sum(nivel_medio, nivel_medio1, nivel_medio2),
-    nivel_superior = sum(nivel_superior, nivel_superior1, nivel_superior2),
-    pedagogos = sum(pedagogos, pedagogos1, pedagogos2),
-    assis_social = sum(assis_social, assis_social1, assis_social2),
-    antropologo= sum(antropologo, antropologo1, antropologo2),
-    adivogados = sum(adivogados, adivogados1, adivogados2),
-    psicologos = sum(psicologos, psicologos1, psicologos2),
-    serv_estatutario= sum(serv_estatutario, serv_estatutario1, serv_estatutario2),
-    empregatos_clt = sum(empregatos_clt, empregatos_clt1, empregatos_clt2),
-    comissionados = sum(comissionados, comissionados1, comissionados2),
-    outros_vinculos = sum(outros_vinculos, outros_vinculos1, outros_vinculos2),
-    nu_trabalhador=sum(nu_trabalhador, nu_trabalhador1,nu_trabalhador2)
-  )   %>% select(IBGE7,nivel_fundamental,nivel_medio,nivel_superior,pedagogos, assis_social,antropologo,
-               adivogados,psicologos,serv_estatutario,empregatos_clt,comissionados,outros_vinculos )
-
-
-
-
-
-
-
-
-
-
  df2 <-  df %>% 
     group_by(IBGE7) %>%
     summarise(
@@ -168,15 +136,7 @@ df2 <-  left_join(municipio, df2)
 
 # calcualar indicadores ---------------------------------------------------
 
-library(readxl)
-populacao <- read_excel("IMRS2022 - BASE POPULACAO REFERENCIA.xlsx") %>% 
-  select(1:3) 
 
-
-pop_2022 <- read_excel("POP FAIXAS ETÁRIAS Totais - Homens e Mulheres 2022.xlsx", 
-                                                               skip = 3) %>% 
-  select(1:3) %>% rename(IBGE7=1,
-                         populacao = 3)
 
 df2$IBGE7 <- as.character(df2$IBGE7)
 
